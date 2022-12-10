@@ -13,7 +13,7 @@ st.markdown("#### The purpose of this survey is to predict the probability of a 
 
 
 #User Input
-par = st.selectionbox("Are you a parent of a child under 18?",
+par = st.selectbox("Are you a parent of a child under 18?",
         options = ["Yes",
                     "No"])
 
@@ -23,7 +23,7 @@ else:
     par = 0
 
 
-mar = st.selectionbox("Are you married",
+mar = st.selectbox("Are you married",
 options = ["Yes",
             "No"])
 
@@ -33,7 +33,7 @@ else:
     mar = 0
 
 
-gen = st.selectionbox("What is your gender?",
+gen = st.selectbox("What is your gender?",
 options = ["Female",
             "Male"])
 
@@ -43,7 +43,7 @@ else:
     gen = 0
 
 
-edu = st.selectionbox("What is your education level?",
+edu = st.selectbox("What is your education level?",
 options = ["Less than high school",
             "Partial high school",
             "High school graduate",
@@ -71,7 +71,7 @@ if edu == "Postgraduate degree":
     edu = 8
 
 
-inc = st.selectionbox("What is your income?",
+inc = st.selectbox("What is your income?",
 options = ["Less than 10,000",
             "10 to under 20,000",
             "20 to under 30,000",
