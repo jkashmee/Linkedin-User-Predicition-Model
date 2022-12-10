@@ -102,7 +102,7 @@ if inc == "150,000 or more":
     inc = 9
 
 
-age = st.slider(label = "Enter your age (select max value for 97+",
+age = st.slider(label = "Enter your age (select max value for 97+)",
     min_value = 0,
     max_value = 97,
     value = 0)
