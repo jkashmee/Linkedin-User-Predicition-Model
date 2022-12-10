@@ -8,7 +8,7 @@ import numpy as np
 #from sklearn.metrics import confusion_matrix
 
 st.markdown("# LinkedIn User Prediction Model")
-st.markdown("### Jon Kashmeeri")
+st.markdown("### Created by: Jon Kashmeeri")
 st.markdown("#### The purpose of this survey is to predict the probability of a person being a LinkedIn user. Please answer the questions below to view the predicted user.")
 
 
