@@ -143,12 +143,12 @@ probs = lr.predict_proba([user])
 
 userclass=""
 if predicted_class[0] == 1:
-    userclass = "User is a LinkedIn User"
+    userclass = "User is a LinkedIn user"
 else:
-    userclass = "User is not a LinkedIn User"
+    userclass = "User is not a LinkedIn user"
 
 
 st.markdown("### Results")
 
 st.write(f"Prediction: {userclass}")
-st.write(f"Probability of not being user compared to being a user {probs[0]}")
+st.write(f"Probability of model [being a user, not being a user] {probs[0]}")
