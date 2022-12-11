@@ -43,34 +43,6 @@ else:
     gen = 0
 
 
-edu = st.selectbox("What is your education level?",
-options = ["Less than high school",
-            "Partial high school",
-            "High school graduate",
-            "Some college (no degree)",
-            "Two-year college degree",
-            "Four-year college degree",
-            "Partial postgraduate",
-            "Postgraduate degree"])
-
-if edu == "Less than high school":
-    edu = 1
-if edu == "Partial high school":
-    edu = 2
-if edu == "High school graduate":
-    edu = 3
-if edu == "Some college (no degree)":
-    edu = 4
-if edu == "Two-year college degree":
-    edu = 5
-if edu == "Four-year college degree":
-    edu = 6
-if edu == "Partial postgraduate":
-    edu = 7
-if edu == "Postgraduate degree":
-    edu = 8
-
-
 inc = st.selectbox("What is your income?",
 options = ["Less than 10,000",
             "10 to under 20,000",
@@ -100,6 +72,34 @@ if inc == "100 to under 150,000":
     inc = 8
 if inc == "150,000 or more":
     inc = 9
+
+
+edu = st.selectbox("What is your education level?",
+options = ["Less than high school",
+            "Partial high school",
+            "High school graduate",
+            "Some college (no degree)",
+            "Two-year college degree",
+            "Four-year college degree",
+            "Partial postgraduate",
+            "Postgraduate degree"])
+
+if edu == "Less than high school":
+    edu = 1
+if edu == "Partial high school":
+    edu = 2
+if edu == "High school graduate":
+    edu = 3
+if edu == "Some college (no degree)":
+    edu = 4
+if edu == "Two-year college degree":
+    edu = 5
+if edu == "Four-year college degree":
+    edu = 6
+if edu == "Partial postgraduate":
+    edu = 7
+if edu == "Postgraduate degree":
+    edu = 8
 
 
 age = st.slider(label = "Enter your age (select max value for 97+)",
