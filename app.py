@@ -7,7 +7,7 @@ from sklearn.model_selection import train_test_split
 from sklearn.metrics import classification_report
 from sklearn.metrics import confusion_matrix
 
-st.markdown("# <ins>LinkedIn User Prediction Model</ins>")
+st.markdown(<ins>"# LinkedIn User Prediction Model"</ins>)
 st.markdown("### Created by: Jon Kashmeeri")
 st.markdown("#### The purpose of this survey is to predict the probability of a person being a LinkedIn user. Please answer the questions below to view the predicted user.")
 
@@ -148,7 +148,7 @@ else:
     userclass = "User is not a LinkedIn User"
 
 
-st.markdown("##### Results")
+st.markdown("### Results")
 
 st.write(f"Prediction: {userclass}")
 st.write(f"Probability of not being user compared to being a user {probs[0]}")
