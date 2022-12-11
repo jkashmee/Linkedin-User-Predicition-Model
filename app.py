@@ -7,7 +7,7 @@ from sklearn.model_selection import train_test_split
 from sklearn.metrics import classification_report
 from sklearn.metrics import confusion_matrix
 
-st.markdown(<ins>"# LinkedIn User Prediction Model"</ins>)
+st.markdown("# LinkedIn User Prediction Model")
 st.markdown("### Created by: Jon Kashmeeri")
 st.markdown("#### The purpose of this survey is to predict the probability of a person being a LinkedIn user. Please answer the questions below to view the predicted user.")
 
