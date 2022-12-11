@@ -147,5 +147,8 @@ if predicted_class[0] == 1:
 else:
     userclass = "User is not a LinkedIn User"
 
+
+st.markdown("### Results")
+
 st.write(f"Prediction: {userclass}")
 st.write(f"Probability of not being user compared to being a user {probs[0]}")
