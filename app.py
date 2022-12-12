@@ -134,7 +134,7 @@ X_train,X_test, Y_train,Y_test = train_test_split(x,y,
                                             test_size = .2,
                                             random_state = 8162001)
 
-lr = LogisticRegression()
+lr = LogisticRegression(class_weight = "balanced")
 lr.fit(X_train,Y_train)
 
 user = [par,mar,gen,edu,inc,age]
