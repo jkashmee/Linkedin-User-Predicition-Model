@@ -153,16 +153,7 @@ st.markdown("### Results")
 st.write(f"Prediction: {userclass}")
 st.write(f"Probability of model [being a user, not being a user]   =   {probs[0]}")
 
-fig = go.Figure(go.Indicator
-{
-        mode = "gauge+number",
-        value = probs[1]-probs[0],
-        title = {"text": f"Predication:" {userclass}"},
-        gauge = {"axis": {"range": [-1,1]},
-                 "steps": [
-                         {"range": [-1,0], "color":"red"},
-                         {"range": [0,1], "color":"green"}],
-                 "bar":{"color":"blue"}}
+
         
         
         
