@@ -14,9 +14,9 @@ st.markdown("#### The purpose of this survey is to predict the probability of a 
 
 
 #User Input
-par = st.selectbox("Are you a parent of a child under 18?",
-        options = ["Yes",
-                    "No"])
+
+par = st.radio("Are you a parent of a child under 18?",
+    ("Yes", "No"))
 
 if par == "Yes":
     par = 1
@@ -24,9 +24,8 @@ else:
     par = 0
 
 
-mar = st.selectbox("Are you married",
-options = ["Yes",
-            "No"])
+mar = st.radio("Are you married?",
+    ("Yes", "No"))
 
 if mar == "Yes":
     mar = 1
@@ -34,14 +33,13 @@ else:
     mar = 0
 
 
-gen = st.selectbox("What is your gender?",
-options = ["Female",
-            "Male"])
+gen = st.radio("What sex are you?",
+    ("Male", "Female"))
 
-if gen == "Female":
-    gen = 2
-else:
+if gen == "Male":
     gen = 0
+else:
+    gen = 2
 
 
 inc = st.selectbox("What is your income?",
