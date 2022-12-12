@@ -156,12 +156,12 @@ st.write(f"Probability of being a LinkedIn user   =   {probs[0][1]}")
 fig = go.Figure(go.Indicator(
 {
         mode = "gauge+number",
-        value = probs[1]-probs[0],
+        value = probs[0][1],
         title = {"text": f"Predication:" {userclass}"},
         gauge = {"axis": {"range": [0,1]},
                  "steps": [
-                         {"range": [0,.], "color":"red"},
-                         {"range": [,1], "color":"green"}],
+                         {"range": [0,.49], "color":"red"},
+                         {"range": [.5,1], "color":"green"}],
                  "bar":{"color":"blue"}
                  ))
                  
