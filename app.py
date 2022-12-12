@@ -123,7 +123,7 @@ ss = pd.DataFrame(
     "female":np.where(s["gender"]==2,1,0),
     "income":np.where(s["income"]>9,0,s["income"]),
     "education":np.where(s["educ2"]>8,0,s["educ2"]),
-    "age":np.where(s["age"]>=97,0,s["age"]),
+    "age":np.where(s["age"]>97,0,s["age"]),
     "sm_li":np.where(clean_sm(s["web1h"])==1,1,0)
 })
 
@@ -138,7 +138,7 @@ X_train,X_test, Y_train,Y_test = train_test_split(x,y,
 lr = LogisticRegression(class_weight = "balanced")
 lr.fit(X_train,Y_train)
 
-user = [par,mar,gen,edu,inc,age]
+user = [par,mar,gen,inc,edu,age]
 predicted_class = lr.predict([user])
 probs = lr.predict_proba([user])
 
