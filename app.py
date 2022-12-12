@@ -161,7 +161,7 @@ fig = go.Figure(go.Indicator(
                  "steps": [
                          {"range": [0,.49], "color":"red"},
                          {"range": [.5,1], "color":"green"}],
-                 "bar":{"color":"blue"}
+                         "bar":{"color":"blue"}}
                  ))
                  
 st.plotly_chart(fig)
