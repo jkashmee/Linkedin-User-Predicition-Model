@@ -151,7 +151,7 @@ else:
 st.markdown("### Results")
 
 st.write(f"Prediction: {userclass}")
-st.write(f"Probability of model [being a user, not being a user]   =   {probs[0]}")
+st.write(f"Probability of model [being a user, not being a user]   =   {probs[0][1]}")
 
 
         
