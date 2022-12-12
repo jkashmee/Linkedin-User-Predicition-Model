@@ -152,7 +152,7 @@ else:
 st.markdown("### Results")
 
 if st.button("Calculate prediction"):
-      ( st.write(f"Prediction: {userclass}")
+        st.write(f"Prediction: {userclass}")
         st.write(f"Probability of being a LinkedIn user   =   {probs[0][1]}")
 
         fig = go.Figure(go.Indicator(
@@ -166,6 +166,6 @@ if st.button("Calculate prediction"):
                                 "bar":{"color":"blue"}}
                          ))
                  
-        st.plotly_chart(fig))
+        st.plotly_chart(fig)
         
         
