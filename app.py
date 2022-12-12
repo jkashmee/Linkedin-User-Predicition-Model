@@ -120,7 +120,7 @@ ss = pd.DataFrame(
     "parent":np.where(s["par"]==1,1,0),
     "married":np.where(s["marital"]==1,1,0),
     "female":np.where(s["gender"]==2,1,0),
-    "income":np.where(s["income"]>10,0,s["income"]),
+    "income":np.where(s["income"]>9,0,s["income"]),
     "education":np.where(s["educ2"]>8,0,s["educ2"]),
     "age":np.where(s["age"]>=97,0,s["age"]),
     "sm_li":np.where(clean_sm(s["web1h"])==1,1,0)
