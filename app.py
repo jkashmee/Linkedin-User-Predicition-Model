@@ -139,7 +139,7 @@ lr.fit(X_train,Y_train)
 
 user = [par,mar,gen,edu,inc,age]
 predicted_class = lr.predict([user])
-probs = lr.predict_proba([user])
+probs = lr.predict_proba([user][0][1])
 
 userclass=""
 if predicted_class[0] == 1:
@@ -153,4 +153,16 @@ st.markdown("### Results")
 st.write(f"Prediction: {userclass}")
 st.write(f"Probability of model [being a user, not being a user]   =   {probs[0]}")
 
-fig = go.figure
+fig = go.Figure(go.Indicator
+{
+        mode = "gauge+number",
+        value = probs[1]-probs[0],
+        title = {"text": f"Predication:" {userclass}"},
+        gauge = {"axis": {"range": [-1,1]},
+                 "steps": [
+                         {"range": [-1,0], "color":"red"},
+                         {"range": [0,1], "color":"green"}],
+                 "bar":{"color":"blue"}}
+        
+        
+        
