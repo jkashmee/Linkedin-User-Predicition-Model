@@ -139,7 +139,7 @@ lr.fit(X_train,Y_train)
 
 user = [par,mar,gen,edu,inc,age]
 predicted_class = lr.predict([user])
-probs = lr.predict_proba([user][0])
+probs = lr.predict_proba([user])
 
 userclass=""
 if predicted_class[0] == 1:
