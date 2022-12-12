@@ -151,20 +151,21 @@ else:
 
 st.markdown("### Results")
 
-st.write(f"Prediction: {userclass}")
-st.write(f"Probability of being a LinkedIn user   =   {probs[0][1]}")
+if st.button("Calculate prediction"):
+      ( st.write(f"Prediction: {userclass}")
+        st.write(f"Probability of being a LinkedIn user   =   {probs[0][1]}")
 
-fig = go.Figure(go.Indicator(
-        mode  = "gauge+number",
-        value = probs[0][1],
-        title = {"text": f"Predication: {userclass}"},
-        gauge = {"axis": {"range": [0,1]},
-                 "steps": [
-                         {"range": [0,.49], "color":"red"},
-                         {"range": [.5,1], "color":"green"}],
-                         "bar":{"color":"blue"}}
-                 ))
+        fig = go.Figure(go.Indicator(
+                mode  = "gauge+number",
+                value = probs[0][1],
+                title = {"text": f"Predication: {userclass}"},
+                gauge = {"axis": {"range": [0,1]},
+                         "steps": [
+                                {"range": [0,.49], "color":"red"},
+                                 {"range": [.5,1], "color":"green"}],
+                                "bar":{"color":"blue"}}
+                         ))
                  
-st.plotly_chart(fig)
+        st.plotly_chart(fig))
         
         
