@@ -153,7 +153,18 @@ st.markdown("### Results")
 st.write(f"Prediction: {userclass}")
 st.write(f"Probability of being a LinkedIn user   =   {probs[0][1]}")
 
-
-        
+fig = go.Figure(go.Indicator(
+{
+        mode = "gauge+number",
+        value = probs[1]-probs[0],
+        title = {"text": f"Predication:" {userclass}"},
+        gauge = {"axis": {"range": [0,1]},
+                 "steps": [
+                         {"range": [0,.], "color":"red"},
+                         {"range": [,1], "color":"green"}],
+                 "bar":{"color":"blue"}
+                 ))
+                 
+st.plotly_chart(fig)
         
         
